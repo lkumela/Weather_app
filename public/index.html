@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Weather App</title>
+</head>
+
+<body>
+  <h1 style="font-size: 5rem; margin-top: 20px; color: white;">Weather App</h1>
+  <div id="inputContainer">
+    <input type="text" id="cityInput" placeholder="Enter City" onkeydown="handleEnterKey(event)" />
+    <button onclick="getWeather()">Get Weather</button>
+  </div>
+
+  <div id="mainContainer">
+    <div id="weatherContainer">
+      <div id="temperature">25°C</div> 
+      <div id="description">Partly Cloudy</div>
+      <div id="location">New York, USA</div>
+    </div>
+
+    <div id="infoContainer">
+      <div id="info">
+        <div id="info">
+          <p>Wind Speed: 10 m/s</p>
+          <p>Wind degree: 270</p>
+          <p>Wind direction: W</p>
+          <p>Pressure: 1015 mb</p>
+          <p>Humidity: 70%</p>
+          <p>Feels Like: 22°C</p>
+          <p>Cloud cover: 0</p>
+          <p>Visibility: 10</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div id="map" style="height: 400px; width: 600px;"></div>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
